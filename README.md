@@ -45,7 +45,7 @@ cualquier proyecto que utilice una configuración centralizada, siguiendo la mis
 ## 🛠️ Instalar dependencia
 
 ```
-npm install @tresdoce/nestjs-commons
+npm install -D @tresdoce/nestjs-commons
 ```
 
 <a name="configurations"></a>
