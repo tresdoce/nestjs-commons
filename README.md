@@ -24,6 +24,7 @@ cualquier proyecto que utilice una configuración centralizada, siguiendo la mis
 - [🥳 Demo](https://rudemex-nestjs-starter.herokuapp.com/docs)
 - [📝 Requerimientos básicos](#basic-requirements)
 - [🛠️ Instalar dependencia](#install-dependencie)
+- [⚙️ Configuración](#configurations)
 - [📤 Commits](#commits)
 - [📄 Changelog](./CHANGELOG.md)
 - [📜 License MIT](license.md)
@@ -45,6 +46,74 @@ cualquier proyecto que utilice una configuración centralizada, siguiendo la mis
 
 ```
 npm install @tresdoce/nestjs-commons
+```
+
+<a name="configurations"></a>
+
+## ⚙️ Configuración
+
+### Eslint
+
+```javascript
+// .eslintrc.js
+
+const config = require('@tresdoce/nestjs-commons');
+module.exports = config.eslintConfig();
+```
+
+### Jest
+
+```javascript
+// jest.config.ts
+
+import { jestConfig } from '@tresdoce/nestjs-commons';
+import * as dotenv from 'dotenv';
+
+process.env.NODE_ENV = 'test';
+
+dotenv.config({
+  path: '.env.test',
+});
+
+module.exports = jestConfig;
+```
+
+### Webpack
+
+```javascript
+// webpack.config.js
+
+const config = require('@tresdoce/nestjs-commons');
+module.exports = (options) => config.buildConfig(options);
+```
+
+### HTTPS
+
+Se requiere crear el `certificado` y la `privkey` (llave privada), Podés encontrar más info [acá](https://leiva.io/2020/06/13/implementar-https-en-nestjs/).
+
+```typescript
+// ./src/main.ts
+
+import * as path from 'path';
+import { readHttpsCertificate } from '@tresdoce/nestjs-commons'
+
+const crtPath = path.resolve(__dirname, './ssl/fullchain.crt');
+const keyPath = path.resolve(__dirname, './ssl/privkey.key');
+
+async function bootstrap() {
+    const app = await NestFactory.create(AppModule, {
+        httpsOptions: readHttpsCertificate(crtPath, keyPath),
+        logger: new Logger(),
+    });
+
+    ...
+
+    await app.listen(port, () => {
+        console.log(`App running on: http://localhost:${port}`);
+    });
+}
+
+bootstrap();
 ```
 
 <a name="commits"></a>
