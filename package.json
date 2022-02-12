@@ -1,7 +1,7 @@
 {
-  "name": "nestjs-package-starter",
-  "version": "1.1.2",
-  "description": "NestJS npm package starter",
+  "name": "@tresdoce/nestjs-commons",
+  "version": "0.0.1",
+  "description": "NestJS commons",
   "author": {
     "name": "Maximiliano \"Mex\" Delgado",
     "email": "mdelgado@tresdoce.com.ar",
@@ -18,13 +18,13 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rudemex/nestjs-package-starter.git"
+    "url": "git+https://github.com/tresdoce/nestjs-commons.git"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/rudemex/nestjs-package-starter/issues"
+    "url": "https://github.com/tresdoce/nestjs-commons/issues"
   },
-  "homepage": "https://github.com/rudemex/nestjs-package-starter#readme",
+  "homepage": "https://github.com/tresdoce/nestjs-commons#readme",
   "scripts": {
     "prebuild": "shx rm -rf pkg",
     "build": "pika build",
@@ -34,19 +34,7 @@
     "release": "standard-version",
     "test": "jest --runInBand --detectOpenHandles --coverage"
   },
-  "peerDependencies": {
-    "@nestjs/common": "^8.2.0",
-    "@nestjs/core": "^8.2.0",
-    "@nestjs/platform-express": "^8.2.0",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.5.2"
-  },
   "dependencies": {
-    "@nestjs/common": "^8.2.6",
-    "@nestjs/core": "^8.2.6",
-    "@nestjs/platform-express": "^8.2.6",
-    "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.5.2",
     "shx": "^0.3.4"
   },
   "devDependencies": {
@@ -58,9 +46,6 @@
     "@babel/preset-typescript": "^7.16.7",
     "@commitlint/cli": "^16.1.0",
     "@commitlint/config-conventional": "^16.0.0",
-    "@nestjs/cli": "^8.2.0",
-    "@nestjs/schematics": "^8.0.4",
-    "@nestjs/testing": "^8.2.5",
     "@pika/cli": "^0.2.0",
     "@pika/pack": "^0.5.0",
     "@pika/plugin-build-node": "^0.9.2",

@@ -15,10 +15,10 @@
     {"type": "ci", "hidden": true},
     {"type": "revert", "hidden": true}
   ],
-  "commitUrlFormat": "https://github.com/rudemex/nestjs-package-starter/commit/{{hash}}",
-  "compareUrlFormat": "https://github.com/rudemex/nestjs-package-starter/compare/{{previousTag}}...{{currentTag}}",
+  "commitUrlFormat": "https://github.com/rudemex/nestjs-commons/commit/{{hash}}",
+  "compareUrlFormat": "https://github.com/rudemex/nestjs-commons/compare/{{previousTag}}...{{currentTag}}",
   "issuePrefixes": ["#"],
-  "issueUrlFormat": "https://github.com/rudemex/nestjs-package-starter/issues/{{id}}",
+  "issueUrlFormat": "https://github.com/rudemex/nestjs-commons/issues/{{id}}",
   "issuePrefixes": ["#"],
   "skip": {
     "bump": false,
